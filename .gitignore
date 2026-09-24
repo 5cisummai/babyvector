@@ -1,0 +1,16 @@
+# Cargo / Rust
+/target/
+**/*.rs.bk
+
+# Local index data (Engine::new("./data/...") during dev)
+/data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+*.swp
+*.swo
+*~

@@ -1,0 +1,20 @@
+[package]
+name = "babyvector"
+version = "0.1.0"
+edition = "2021"
+description = "Extremely light per-directory 1-bit quantized vector index"
+license = "MIT OR Apache-2.0"
+
+[lib]
+crate-type = ["rlib", "staticlib"]
+
+[dependencies]
+fs4 = "0.12"
+memmap2 = "0.9"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+
+[dev-dependencies]
+rand = "0.9"
+tempfile = "3"
