@@ -258,9 +258,8 @@ mod tests {
         let mut vectors = vec![0f32; 24];
         for i in 0..3 {
             for j in 0..8 {
-                vectors[i * 8 + j] = (i + 1) as f32;
+                vectors[i * 8 + j] = if j == i { 1.0 } else { -1.0 };
             }
-            vectors[i * 8 + i] += 0.5;
         }
         assert_eq!(
             bv_add_vectors(h, ids.as_ptr(), vectors.as_ptr(), 3),
